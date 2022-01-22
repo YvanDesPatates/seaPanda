@@ -13,6 +13,14 @@ public class MoovePlayer : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            moveSpeed =500;
+        }
+        else
+        {
+            moveSpeed = 150;
+        }
         float horizontalMovement = Input.GetAxis("Horizontal") * moveSpeed * Time.deltaTime;
         float verticalMovement = Input.GetAxis("Vertical") * moveSpeed * Time.deltaTime;
 
