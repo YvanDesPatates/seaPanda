@@ -68,6 +68,8 @@
     <Compile Include="Assets\script\Algue.cs" />
     <Compile Include="Assets\script\SubmarineMovement.cs" />
     <Compile Include="Assets\script\LoadScenes.cs" />
+    <Compile Include="Assets\script\Battery.cs" />
+    <Compile Include="Assets\script\BatteryBar.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
