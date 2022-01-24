@@ -95,4 +95,9 @@ public class SubmarineMovement : MonoBehaviour
     {
         return PlayerInside;
     }
+
+    public bool getIsOn()
+    {
+        return isOn;
+    }
 }

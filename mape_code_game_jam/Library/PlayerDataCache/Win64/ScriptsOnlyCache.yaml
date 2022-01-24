@@ -2,6 +2,8 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - Algue
+    - Battery
+    - BatteryBar
     - Fish
     - FishSpawner
     - FollowPlayer
@@ -17,7 +19,6 @@ ScriptsOnlyBuild:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.IK.Editor.dll:
     - UnityEditor.U2D.IK.IKEditorManager
-    - UnityEditor.U2D.IK.IKGizmos
     Unity.2D.IK.Runtime.dll:
     - UnityEditor.U2D.IK.IKEditorManagerHelper
     Unity.2D.Tilemap.Editor.dll:
@@ -27,7 +28,6 @@ ScriptsOnlyBuild:
     - UnityEditor.Tilemaps.GridPaintPaletteWindow
     - UnityEditor.Tilemaps.GridPaintingState
     - UnityEditor.Tilemaps.GridPaletteBrushes
-    - UnityEditor.Tilemaps.GridPalettes
     - UnityEditor.Tilemaps.PaintableSceneViewGrid
     - UnityEditor.Tilemaps.SceneViewGridManager
     - UnityEditor.Tilemaps.SceneViewOpenTilePaletteHelper
@@ -82,15 +82,15 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 2204}
     - Class: 114
-      Script: {instanceID: 2618}
+      Script: {instanceID: 2620}
     - Class: 114
-      Script: {instanceID: 2778}
+      Script: {instanceID: 2780}
     - Class: 114
-      Script: {instanceID: 2994}
+      Script: {instanceID: 2996}
     - Class: 114
-      Script: {instanceID: 3236}
+      Script: {instanceID: 3238}
     - Class: 114
-      Script: {instanceID: 4112}
+      Script: {instanceID: 4116}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -153,29 +153,33 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 2202}
     - Class: 114
-      Script: {instanceID: 2618}
+      Script: {instanceID: 2532}
     - Class: 114
-      Script: {instanceID: 2778}
+      Script: {instanceID: 2620}
     - Class: 114
-      Script: {instanceID: 2994}
+      Script: {instanceID: 2780}
     - Class: 114
-      Script: {instanceID: 3236}
+      Script: {instanceID: 2996}
     - Class: 114
-      Script: {instanceID: 3260}
+      Script: {instanceID: 3238}
     - Class: 114
-      Script: {instanceID: 3470}
+      Script: {instanceID: 3262}
     - Class: 114
-      Script: {instanceID: 3552}
+      Script: {instanceID: 3472}
     - Class: 114
-      Script: {instanceID: 3584}
+      Script: {instanceID: 3554}
     - Class: 114
-      Script: {instanceID: 3842}
+      Script: {instanceID: 3586}
     - Class: 114
-      Script: {instanceID: 3876}
+      Script: {instanceID: 3844}
     - Class: 114
-      Script: {instanceID: 4112}
+      Script: {instanceID: 3878}
     - Class: 114
-      Script: {instanceID: 34060}
+      Script: {instanceID: 3964}
+    - Class: 114
+      Script: {instanceID: 4116}
+    - Class: 114
+      Script: {instanceID: 4500}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -228,15 +232,15 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 2204}
     - Class: 114
-      Script: {instanceID: 2618}
+      Script: {instanceID: 2620}
     - Class: 114
-      Script: {instanceID: 2778}
+      Script: {instanceID: 2780}
     - Class: 114
-      Script: {instanceID: 2994}
+      Script: {instanceID: 2996}
     - Class: 114
-      Script: {instanceID: 3236}
+      Script: {instanceID: 3238}
     - Class: 114
-      Script: {instanceID: 4112}
+      Script: {instanceID: 4116}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -404,6 +408,12 @@ ScriptsOnlyBuild:
     className: IKManager2D
   - hash:
       serializedVersion: 2
+      Hash: 611d60edc23b5a4e785e2d0e8c4d498c
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MonsterZone
+  - hash:
+      serializedVersion: 2
       Hash: a1aa98c78061c6f03a8c124cda576e67
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -554,7 +564,7 @@ ScriptsOnlyBuild:
     className: FishSpawner
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: 12a5d5e139ba55ee2d01c4ddc4d15034
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Fish
@@ -644,6 +654,12 @@ ScriptsOnlyBuild:
     className: PositionAsUV1
   - hash:
       serializedVersion: 2
+      Hash: 6a42c27c0848221b72395c59ddf73118
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Battery
+  - hash:
+      serializedVersion: 2
       Hash: 87ff43d2baf3385cba327d8f803a4ebb
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -720,6 +736,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: ControlTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 4b8dff74c0603f3e6246514a412ffcba
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: BatteryBar
   - hash:
       serializedVersion: 2
       Hash: 3165968ba45c74472d279ba04455fccb
@@ -834,15 +856,9 @@ ScriptsOnlyBuild:
     assemblyName: Unity.2D.IK.Runtime.dll
     namespaceName: UnityEngine.U2D.IK
     className: FabrikSolver2D
-  - hash:
-      serializedVersion: 2
-      Hash: 611d60edc23b5a4e785e2d0e8c4d498c
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: MonsterZone
   platform: 19
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
   - Assets/Scenes/GameOver.unity
   - Assets/Scenes/Titre.unity
-  playerPath: C:/Users/cecil/Desktop/seapanda/mape_code_game_jam.exe
+  playerPath: C:/Users/yvis9/OneDrive/Bureau/mape_code_game_jam.exe
