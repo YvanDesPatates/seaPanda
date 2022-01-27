@@ -7,6 +7,7 @@ public class PlayerOxygen : MonoBehaviour
     public int maxOxygenLevel = 100;
     public static float currentOxygenLevel;
     public float oxygenUsedPerSecond;
+    public float oxygenIncreasedPerSecond;
 
     public PlayerOxygeneBar oxygenBar;
     public SubmarineMovement submarine;
@@ -21,7 +22,7 @@ public class PlayerOxygen : MonoBehaviour
     {
         if (submarine.getPlayerInside() && submarineOxygene.GetCurrentSubOxygeneLevel() >= 0)
         {
-            OxygenIncrease(oxygenUsedPerSecond);
+            OxygenIncrease(oxygenIncreasedPerSecond);
 
         }
         else
@@ -33,11 +34,11 @@ public class PlayerOxygen : MonoBehaviour
 
     }
 
-    public void OxygenDecrease(float _oxygenUsedPerSecond)
+    public void OxygenDecrease(float _oxygenIncreasedPerSecond)
     {
         if (currentOxygenLevel > 0)
         {
-            currentOxygenLevel -= _oxygenUsedPerSecond * Time.deltaTime;
+            currentOxygenLevel -= _oxygenIncreasedPerSecond * Time.deltaTime;
             oxygenBar.SetOxygenLevel(currentOxygenLevel);
         }
     }
