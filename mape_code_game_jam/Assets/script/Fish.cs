@@ -10,13 +10,30 @@ public class Fish : MonoBehaviour
 
     public Transform cible;
 
+
     void Start()
     {
         zAngle = Random.Range(-10, 10);
         transform.Rotate(0, 0, zAngle);
+        StartCoroutine(KillFish());
+        float speed = Random.Range(4.1f, 6.1f);
+        print(speed);
     }
 
     void Update()
+    {
+        if(cible != null)
+        {
+            MoovFish();
+        }
+
+        if (transform.position.x < positionOnStart - 10)
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    public void MoovFish()
     {
         z = Random.value < 0.55 ? 1 : -1;
         transform.Rotate(0, 0, z);
@@ -25,10 +42,11 @@ public class Fish : MonoBehaviour
         targetPos = cible.position;
         transform.right = cible.position - transform.position;
         cible.position = targetPos;
+    }
 
-        if (transform.position.x < positionOnStart - 50)
-        {
-            Destroy(gameObject);
-        }
+    IEnumerator KillFish()
+    {
+        yield return new WaitForSeconds(10);
+        Destroy(gameObject);
     }
 }
